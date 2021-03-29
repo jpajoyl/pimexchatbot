@@ -8,5 +8,18 @@ router.get('/', ((req, res) => {
         "test": true
     })
 }))
-
+router.post('/chatterbot', ((req, res) => {
+    console.log(req.body)
+    res.json({
+        "fulfillmentMessages": [
+            {
+                "text": {
+                    "text": [
+                        "Text response from webhook"
+                    ]
+                }
+            }
+        ]
+    })
+}))
 module.exports = router;
