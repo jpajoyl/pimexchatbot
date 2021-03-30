@@ -9,32 +9,34 @@ router.get('/', ((req, res) => {
     })
 }))
 router.post('/chatterbot', ((req, res) => {
-    console.log(req.body)
-    const api = {
-        "url": "https://api.pimex.io/v2/",
-        "url1": "https://api.pimex.io/",
-        "key": "!eqBwMfoWmEOWRoz^R^60$p2K"
-    }
+    const param = req.body.queryResult.outputContexts[3].parameters
     const data = {
         _state: "lead",
-        email: "juanpajoy@gmail.com",
-        name: "Juan",
-        origin: "https://app.pimex.co",
-        phone: "12344",
+        email: param.email,
+        name: param.name,
+        origin: "Chat",
+        phone: param.phone_number,
         project: "14557",
         referrer: "test"
     }
-    axios.post('https://api.pimex.io/v2/conversions/', data).then(r => console.log(r))
-    res.json({
-        "fulfillmentMessages": [
-            {
-                "text": {
-                    "text": [
-                        "Text response from webhook"
-                    ]
+    axios.post('https://api.pimex.io/v2/conversions/', data).then(r => {
+        let response = ''
+        if (r.data.data.event === 'created'){
+            response = 'Se ha creado el lead'
+        } else {
+            response = 'Error'
+        }
+        res.json({
+            "fulfillmentMessages": [
+                {
+                    "text": {
+                        "text": [
+                            response
+                        ]
+                    }
                 }
-            }
-        ]
+            ]
+        })
     })
 }))
 module.exports = router;
