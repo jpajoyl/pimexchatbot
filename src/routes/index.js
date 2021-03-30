@@ -17,7 +17,7 @@ router.post('/chatterbot', ((req, res) => {
     }
     const data = {
         _state: "lead",
-        email: "juan@gmail.com",
+        email: "juanpajoy@gmail.com",
         name: "Juan",
         origin: "https://app.pimex.co",
         phone: "12344",
