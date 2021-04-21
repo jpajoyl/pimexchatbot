@@ -1,0 +1,214 @@
+{
+  "settings": {
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true,
+    "languages": [
+      "es"
+    ],
+    "forceNER": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "es"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "es": {
+        "settings": {
+          "locale": "es",
+          "trainByDomain": false,
+          "tag": "domain-manager-es",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "com,hab,que": {
+            "intent": "comida",
+            "domain": "default"
+          },
+          "com": {
+            "intent": "comida",
+            "domain": "default"
+          },
+          "com,de,list": {
+            "intent": "comida",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "comida": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "¿Que comidas hay?",
+            "intent": "comida"
+          },
+          {
+            "domain": "default",
+            "utterance": "Comidas",
+            "intent": "comida"
+          },
+          {
+            "domain": "default",
+            "utterance": "lista de comidas",
+            "intent": "comida"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "es",
+              "tag": "nlu-es",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "que": 1,
+              "com": 1,
+              "hab": 1,
+              "list": 1,
+              "de": 1
+            },
+            "intents": {
+              "comida": 1
+            },
+            "intentFeatures": {
+              "comida": {
+                "que": 1,
+                "com": 1,
+                "hab": 1,
+                "list": 1,
+                "de": 1
+              }
+            },
+            "featuresToIntent": {
+              "que": [
+                "comida"
+              ],
+              "com": [
+                "comida"
+              ],
+              "hab": [
+                "comida"
+              ],
+              "list": [
+                "comida"
+              ],
+              "de": [
+                "comida"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "log": true,
+                "locale": "es",
+                "tag": "nlu-es",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true
+              },
+              "features": [
+                "que",
+                "com",
+                "hab",
+                "list",
+                "de"
+              ],
+              "intents": [
+                "comida"
+              ],
+              "perceptrons": [
+                [
+                  0.09904304891824722,
+                  9.425287246704102,
+                  0.09904304891824722,
+                  0.09405592083930969,
+                  0.09405592083930969,
+                  4.712988719922839
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "es",
+        "¿Que comidas hay?"
+      ],
+      [
+        "es",
+        "Comidas"
+      ],
+      [
+        "es",
+        "lista de comidas"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "es": {
+        "Cebolla, carne, manzana.": [
+          {
+            "answer": "comida"
+          }
+        ],
+        "cebo, man y carn": [
+          {
+            "answer": "comida"
+          }
+        ],
+        "comida": [
+          {
+            "answer": "Cebolla, carne, manzana."
+          },
+          {
+            "answer": "todas las comidas"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
