@@ -105,9 +105,17 @@ router.delete('/delete-button/:id/:buttonId', async (req, res) => {
 router.get('/get-button/:id', async (req, res) => {
     const {id} = req.params;
     const buttons = getConnection().get('button.' + id).value();
-    res.status(200).send({
-        'buttons': buttons
-    });
+    const htmlButtons = buttons.map(b => {
+        return {
+            id: b.id,
+            html: `<button value="${b.message}" onclick="alert('hola')" style="text-align: center;
+background-color: white;
+border-radius: 30px;
+border: #989898 2px solid;
+padding: 7px;">${b.message}</button>`
+        }
+    })
+    res.status(200).send(htmlButtons.map(b => b.html).join(''));
 })
 
 
