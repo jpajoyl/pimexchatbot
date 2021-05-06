@@ -1,0 +1,25 @@
+{
+  "utterance": {
+    "14557": [
+      {
+        "intent": "welcome.intent",
+        "message": "hola"
+      },
+      {
+        "intent": "what.intent",
+        "message": "que sss?"
+      },
+      {
+        "intent": "login-fail.intent",
+        "message": "no me deja entrar a la plataforma"
+      },
+      {
+        "intent": "login-fail.intent",
+        "message": "no me deja entrar a la plataforma"
+      }
+    ]
+  },
+  "button": {
+    "14557": []
+  }
+}

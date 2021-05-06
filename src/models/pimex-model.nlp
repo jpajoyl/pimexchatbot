@@ -1,0 +1,2038 @@
+{
+  "settings": {
+    "languages": [
+      "es"
+    ],
+    "forceNER": true,
+    "ner": {
+      "useDuckling": true
+    },
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "es"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "es": {
+        "settings": {
+          "locale": "es",
+          "trainByDomain": false,
+          "tag": "domain-manager-es",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "oe": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "hol,que,tal": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "buen": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "buen,dia": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "hol": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "grac": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "adi": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "hast,lueg": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "esper,llam,su": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "el,hast,proxim": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "cha": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "comunic,conmig,esper,pront,que,se": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "asesor": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "asesor,comunic,con,quer,un": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "algu,con,habl,quer": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "comunic,con,necesit,person,una": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "hac,pimex,pod,que": {
+            "intent": "what.intent",
+            "domain": "default"
+          },
+          "pimex,que,ser": {
+            "intent": "what.intent",
+            "domain": "default"
+          },
+          "hac,que": {
+            "intent": "what.intent",
+            "domain": "default"
+          },
+          "par,pimex,que,serv": {
+            "intent": "what.intent",
+            "domain": "default"
+          },
+          "cost,cuant": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "que,ten,valor": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "pimex,prec,que,ten,utilic": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "de,pimex,prec": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "cost,que,ten,utilic": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "cost,que,ten": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "cuant,pimex,val": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "par,prec,utilic": {
+            "intent": "fee.intent",
+            "domain": "default"
+          },
+          "a,agreg,como,de,el,equip,mi,tabler,trabaj": {
+            "intent": "add-team.intent",
+            "domain": "default"
+          },
+          "a,agreg,al,como,mas,person,tabler": {
+            "intent": "add-team.intent",
+            "domain": "default"
+          },
+          "a,agreg,al,equip,mi,par,pas,tabler": {
+            "intent": "add-team.intent",
+            "domain": "default"
+          },
+          "agreg,como,usuar": {
+            "intent": "add-team.intent",
+            "domain": "default"
+          },
+          "a,como,excel,export,lead,mis,un": {
+            "intent": "excel-leads.intent",
+            "domain": "default"
+          },
+          "a,el,excel,export,lead,pod,se,un": {
+            "intent": "excel-leads.intent",
+            "domain": "default"
+          },
+          "a,client,el,en,excel,export,pod,se,un": {
+            "intent": "excel-leads.intent",
+            "domain": "default"
+          },
+          "como,el,funcion,tabler": {
+            "intent": "boards.intent",
+            "domain": "default"
+          },
+          "de,el,explic,funcion,pimex,tabler": {
+            "intent": "boards.intent",
+            "domain": "default"
+          },
+          "a,acced,cont,deb,hac,mi,no,pod,que": {
+            "intent": "login-fail.intent",
+            "domain": "default"
+          },
+          "aplic,con,dej,el,ingres,no,problem,ten,y": {
+            "intent": "login-fail.intent",
+            "domain": "default"
+          },
+          "dej,ingres,me,no": {
+            "intent": "login-fail.intent",
+            "domain": "default"
+          },
+          "el,export,factur,necesit": {
+            "intent": "billing-export.intent",
+            "domain": "default"
+          },
+          "como,export,factur,mi,pod": {
+            "intent": "billing-export.intent",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "welcome.intent": "default",
+          "bye.intent": "default",
+          "asesor.intent": "default",
+          "what.intent": "default",
+          "fee.intent": "default",
+          "add-team.intent": "default",
+          "excel-leads.intent": "default",
+          "boards.intent": "default",
+          "login-fail.intent": "default",
+          "billing-export.intent": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "oe",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "hola que tal",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "buenas",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "buenos dias",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "hola",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Gracias",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Adiós",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "hasta luego",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Espero su llamada",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hasta la próxima",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Chao",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Espero que se comuniquen conmigo pronto",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Asesor",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "quiero comunicarme con un asesor",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "quiero hablar con alguien",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "necesito comunicarme con una persona",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "que puede hacer pimex?",
+            "intent": "what.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Qué es Pimex?",
+            "intent": "what.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "que hacen?",
+            "intent": "what.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Para qué sirve Pimex?",
+            "intent": "what.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "cuánto cuesta?",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "que valor tiene?",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Qué precio tiene utilizar Pimex?",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Precio de Pimex",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Qué costo tiene utilizarlo?",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Qué costo tiene?",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cuánto vale Pimex?",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Precio para utilizarlo",
+            "intent": "fee.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cómo agregar a mi equipo de trabajo a los tableros?",
+            "intent": "add-team.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cómo agrego a más personas al tablero?",
+            "intent": "add-team.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Pasos para agregar a mi equipo al tablero",
+            "intent": "add-team.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cómo agregar usuarios?",
+            "intent": "add-team.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cómo exportar mis leads a un excel?",
+            "intent": "excel-leads.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Se puede exportar los leads a un excel",
+            "intent": "excel-leads.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Se puede exportar a los clientes en un excel",
+            "intent": "excel-leads.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cómo funcionan los tableros?",
+            "intent": "boards.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Explicación de funcionamiento de los tableros de Pimex",
+            "intent": "boards.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "No puedo acceder a mi cuenta, ¿qué debo hacer?",
+            "intent": "login-fail.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "tenemos problemas con la aplicación y no deja ingresar",
+            "intent": "login-fail.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "No me deja ingresar",
+            "intent": "login-fail.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Necesito la exportar la factura",
+            "intent": "billing-export.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "¿Cómo puedo exportar mi factura?",
+            "intent": "billing-export.intent"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "es",
+              "tag": "nlu-es",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "oe": 1,
+              "hol": 1,
+              "que": 1,
+              "tal": 1,
+              "buen": 1,
+              "dia": 1,
+              "grac": 1,
+              "adi": 1,
+              "hast": 1,
+              "lueg": 1,
+              "esper": 1,
+              "su": 1,
+              "llam": 1,
+              "el": 1,
+              "proxim": 1,
+              "cha": 1,
+              "se": 1,
+              "comunic": 1,
+              "conmig": 1,
+              "pront": 1,
+              "asesor": 1,
+              "quer": 1,
+              "con": 1,
+              "un": 1,
+              "habl": 1,
+              "algu": 1,
+              "necesit": 1,
+              "una": 1,
+              "person": 1,
+              "pod": 1,
+              "hac": 1,
+              "pimex": 1,
+              "ser": 1,
+              "par": 1,
+              "serv": 1,
+              "cuant": 1,
+              "cost": 1,
+              "valor": 1,
+              "ten": 1,
+              "prec": 1,
+              "utilic": 1,
+              "de": 1,
+              "val": 1,
+              "como": 1,
+              "agreg": 1,
+              "a": 1,
+              "mi": 1,
+              "equip": 1,
+              "trabaj": 1,
+              "tabler": 1,
+              "mas": 1,
+              "al": 1,
+              "pas": 1,
+              "usuar": 1,
+              "export": 1,
+              "mis": 1,
+              "lead": 1,
+              "excel": 1,
+              "client": 1,
+              "en": 1,
+              "funcion": 1,
+              "explic": 1,
+              "no": 1,
+              "acced": 1,
+              "cont": 1,
+              "deb": 1,
+              "problem": 1,
+              "aplic": 1,
+              "y": 1,
+              "dej": 1,
+              "ingres": 1,
+              "me": 1,
+              "factur": 1
+            },
+            "intents": {
+              "welcome.intent": 1,
+              "bye.intent": 1,
+              "asesor.intent": 1,
+              "what.intent": 1,
+              "fee.intent": 1,
+              "add-team.intent": 1,
+              "excel-leads.intent": 1,
+              "boards.intent": 1,
+              "login-fail.intent": 1,
+              "billing-export.intent": 1
+            },
+            "intentFeatures": {
+              "welcome.intent": {
+                "oe": 1,
+                "hol": 1,
+                "que": 1,
+                "tal": 1,
+                "buen": 1,
+                "dia": 1
+              },
+              "bye.intent": {
+                "grac": 1,
+                "adi": 1,
+                "hast": 1,
+                "lueg": 1,
+                "esper": 1,
+                "su": 1,
+                "llam": 1,
+                "el": 1,
+                "proxim": 1,
+                "cha": 1,
+                "que": 1,
+                "se": 1,
+                "comunic": 1,
+                "conmig": 1,
+                "pront": 1
+              },
+              "asesor.intent": {
+                "asesor": 1,
+                "quer": 1,
+                "comunic": 1,
+                "con": 1,
+                "un": 1,
+                "habl": 1,
+                "algu": 1,
+                "necesit": 1,
+                "una": 1,
+                "person": 1
+              },
+              "what.intent": {
+                "que": 1,
+                "pod": 1,
+                "hac": 1,
+                "pimex": 1,
+                "ser": 1,
+                "par": 1,
+                "serv": 1
+              },
+              "fee.intent": {
+                "cuant": 1,
+                "cost": 1,
+                "que": 1,
+                "valor": 1,
+                "ten": 1,
+                "prec": 1,
+                "utilic": 1,
+                "pimex": 1,
+                "de": 1,
+                "val": 1,
+                "par": 1
+              },
+              "add-team.intent": {
+                "como": 1,
+                "agreg": 1,
+                "a": 1,
+                "mi": 1,
+                "equip": 1,
+                "de": 1,
+                "trabaj": 1,
+                "el": 1,
+                "tabler": 1,
+                "mas": 1,
+                "person": 1,
+                "al": 1,
+                "pas": 1,
+                "par": 1,
+                "usuar": 1
+              },
+              "excel-leads.intent": {
+                "como": 1,
+                "export": 1,
+                "mis": 1,
+                "lead": 1,
+                "a": 1,
+                "un": 1,
+                "excel": 1,
+                "se": 1,
+                "pod": 1,
+                "el": 1,
+                "client": 1,
+                "en": 1
+              },
+              "boards.intent": {
+                "como": 1,
+                "funcion": 1,
+                "el": 1,
+                "tabler": 1,
+                "explic": 1,
+                "de": 1,
+                "pimex": 1
+              },
+              "login-fail.intent": {
+                "no": 1,
+                "pod": 1,
+                "acced": 1,
+                "a": 1,
+                "mi": 1,
+                "cont": 1,
+                "que": 1,
+                "deb": 1,
+                "hac": 1,
+                "ten": 1,
+                "problem": 1,
+                "con": 1,
+                "el": 1,
+                "aplic": 1,
+                "y": 1,
+                "dej": 1,
+                "ingres": 1,
+                "me": 1
+              },
+              "billing-export.intent": {
+                "necesit": 1,
+                "el": 1,
+                "export": 1,
+                "factur": 1,
+                "como": 1,
+                "pod": 1,
+                "mi": 1
+              }
+            },
+            "featuresToIntent": {
+              "oe": [
+                "welcome.intent"
+              ],
+              "hol": [
+                "welcome.intent"
+              ],
+              "que": [
+                "welcome.intent",
+                "bye.intent",
+                "what.intent",
+                "fee.intent",
+                "login-fail.intent"
+              ],
+              "tal": [
+                "welcome.intent"
+              ],
+              "buen": [
+                "welcome.intent"
+              ],
+              "dia": [
+                "welcome.intent"
+              ],
+              "grac": [
+                "bye.intent"
+              ],
+              "adi": [
+                "bye.intent"
+              ],
+              "hast": [
+                "bye.intent"
+              ],
+              "lueg": [
+                "bye.intent"
+              ],
+              "esper": [
+                "bye.intent"
+              ],
+              "su": [
+                "bye.intent"
+              ],
+              "llam": [
+                "bye.intent"
+              ],
+              "el": [
+                "bye.intent",
+                "add-team.intent",
+                "excel-leads.intent",
+                "boards.intent",
+                "login-fail.intent",
+                "billing-export.intent"
+              ],
+              "proxim": [
+                "bye.intent"
+              ],
+              "cha": [
+                "bye.intent"
+              ],
+              "se": [
+                "bye.intent",
+                "excel-leads.intent"
+              ],
+              "comunic": [
+                "bye.intent",
+                "asesor.intent"
+              ],
+              "conmig": [
+                "bye.intent"
+              ],
+              "pront": [
+                "bye.intent"
+              ],
+              "asesor": [
+                "asesor.intent"
+              ],
+              "quer": [
+                "asesor.intent"
+              ],
+              "con": [
+                "asesor.intent",
+                "login-fail.intent"
+              ],
+              "un": [
+                "asesor.intent",
+                "excel-leads.intent"
+              ],
+              "habl": [
+                "asesor.intent"
+              ],
+              "algu": [
+                "asesor.intent"
+              ],
+              "necesit": [
+                "asesor.intent",
+                "billing-export.intent"
+              ],
+              "una": [
+                "asesor.intent"
+              ],
+              "person": [
+                "asesor.intent",
+                "add-team.intent"
+              ],
+              "pod": [
+                "what.intent",
+                "excel-leads.intent",
+                "login-fail.intent",
+                "billing-export.intent"
+              ],
+              "hac": [
+                "what.intent",
+                "login-fail.intent"
+              ],
+              "pimex": [
+                "what.intent",
+                "fee.intent",
+                "boards.intent"
+              ],
+              "ser": [
+                "what.intent"
+              ],
+              "par": [
+                "what.intent",
+                "fee.intent",
+                "add-team.intent"
+              ],
+              "serv": [
+                "what.intent"
+              ],
+              "cuant": [
+                "fee.intent"
+              ],
+              "cost": [
+                "fee.intent"
+              ],
+              "valor": [
+                "fee.intent"
+              ],
+              "ten": [
+                "fee.intent",
+                "login-fail.intent"
+              ],
+              "prec": [
+                "fee.intent"
+              ],
+              "utilic": [
+                "fee.intent"
+              ],
+              "de": [
+                "fee.intent",
+                "add-team.intent",
+                "boards.intent"
+              ],
+              "val": [
+                "fee.intent"
+              ],
+              "como": [
+                "add-team.intent",
+                "excel-leads.intent",
+                "boards.intent",
+                "billing-export.intent"
+              ],
+              "agreg": [
+                "add-team.intent"
+              ],
+              "a": [
+                "add-team.intent",
+                "excel-leads.intent",
+                "login-fail.intent"
+              ],
+              "mi": [
+                "add-team.intent",
+                "login-fail.intent",
+                "billing-export.intent"
+              ],
+              "equip": [
+                "add-team.intent"
+              ],
+              "trabaj": [
+                "add-team.intent"
+              ],
+              "tabler": [
+                "add-team.intent",
+                "boards.intent"
+              ],
+              "mas": [
+                "add-team.intent"
+              ],
+              "al": [
+                "add-team.intent"
+              ],
+              "pas": [
+                "add-team.intent"
+              ],
+              "usuar": [
+                "add-team.intent"
+              ],
+              "export": [
+                "excel-leads.intent",
+                "billing-export.intent"
+              ],
+              "mis": [
+                "excel-leads.intent"
+              ],
+              "lead": [
+                "excel-leads.intent"
+              ],
+              "excel": [
+                "excel-leads.intent"
+              ],
+              "client": [
+                "excel-leads.intent"
+              ],
+              "en": [
+                "excel-leads.intent"
+              ],
+              "funcion": [
+                "boards.intent"
+              ],
+              "explic": [
+                "boards.intent"
+              ],
+              "no": [
+                "login-fail.intent"
+              ],
+              "acced": [
+                "login-fail.intent"
+              ],
+              "cont": [
+                "login-fail.intent"
+              ],
+              "deb": [
+                "login-fail.intent"
+              ],
+              "problem": [
+                "login-fail.intent"
+              ],
+              "aplic": [
+                "login-fail.intent"
+              ],
+              "y": [
+                "login-fail.intent"
+              ],
+              "dej": [
+                "login-fail.intent"
+              ],
+              "ingres": [
+                "login-fail.intent"
+              ],
+              "me": [
+                "login-fail.intent"
+              ],
+              "factur": [
+                "billing-export.intent"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "es",
+                "tag": "nlu-es",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "oe",
+                "hol",
+                "que",
+                "tal",
+                "buen",
+                "dia",
+                "grac",
+                "adi",
+                "hast",
+                "lueg",
+                "esper",
+                "su",
+                "llam",
+                "el",
+                "proxim",
+                "cha",
+                "se",
+                "comunic",
+                "conmig",
+                "pront",
+                "asesor",
+                "quer",
+                "con",
+                "un",
+                "habl",
+                "algu",
+                "necesit",
+                "una",
+                "person",
+                "pod",
+                "hac",
+                "pimex",
+                "ser",
+                "par",
+                "serv",
+                "cuant",
+                "cost",
+                "valor",
+                "ten",
+                "prec",
+                "utilic",
+                "de",
+                "val",
+                "como",
+                "agreg",
+                "a",
+                "mi",
+                "equip",
+                "trabaj",
+                "tabler",
+                "mas",
+                "al",
+                "pas",
+                "usuar",
+                "export",
+                "mis",
+                "lead",
+                "excel",
+                "client",
+                "en",
+                "funcion",
+                "explic",
+                "no",
+                "acced",
+                "cont",
+                "deb",
+                "problem",
+                "aplic",
+                "y",
+                "dej",
+                "ingres",
+                "me",
+                "factur"
+              ],
+              "intents": [
+                "welcome.intent",
+                "bye.intent",
+                "asesor.intent",
+                "what.intent",
+                "fee.intent",
+                "add-team.intent",
+                "excel-leads.intent",
+                "boards.intent",
+                "login-fail.intent",
+                "billing-export.intent"
+              ],
+              "perceptrons": [
+                [
+                  11.023021697998047,
+                  10.775368690490723,
+                  -2.1020615100860596,
+                  2.5566601753234863,
+                  10.499155044555664,
+                  0.925937831401825,
+                  -3.1489522457122803,
+                  -3.139920711517334,
+                  -1.8689699172973633,
+                  -1.3224313259124756,
+                  -1.348707914352417,
+                  -0.9240126013755798,
+                  -0.9240126013755798,
+                  -1.258723258972168,
+                  -0.505162239074707,
+                  -3.1265697479248047,
+                  -0.3801909387111664,
+                  -0.8579003214836121,
+                  -0.3691023290157318,
+                  -0.3691023290157318,
+                  -3.1185216903686523,
+                  -0.840867817401886,
+                  -1.0776532888412476,
+                  -0.34878799319267273,
+                  -0.6362214088439941,
+                  -0.6362214088439941,
+                  -0.7024753093719482,
+                  -0.22580604255199432,
+                  -0.3378969132900238,
+                  -0.49286678433418274,
+                  -1.8494685888290405,
+                  -1.8394572734832764,
+                  -0.6443084478378296,
+                  -1.1095658540725708,
+                  -0.3034893572330475,
+                  -1.405211329460144,
+                  -1.7739030122756958,
+                  -0.7839962244033813,
+                  -1.3626607656478882,
+                  -1.0461121797561646,
+                  -1.0325124263763428,
+                  -0.3040938079357147,
+                  -0.10425218194723129,
+                  -1.3610421419143677,
+                  -1.0346615314483643,
+                  -0.412047803401947,
+                  -0.22317755222320557,
+                  -0.12487021088600159,
+                  -0.05305049195885658,
+                  -0.408296138048172,
+                  -0.08414018154144287,
+                  -0.15819993615150452,
+                  -0.04993213713169098,
+                  -0.7908965945243835,
+                  -0.6903655529022217,
+                  -0.1384708732366562,
+                  -0.14420835673809052,
+                  -0.14420835673809052,
+                  0,
+                  0,
+                  -0.16453072428703308,
+                  0,
+                  -0.8135356903076172,
+                  -0.015175873413681984,
+                  -0.015175873413681984,
+                  -0.015175873413681984,
+                  0,
+                  0,
+                  0,
+                  -0.7915589809417725,
+                  -0.7915589809417725,
+                  -0.7915589809417725,
+                  -0.5366084575653076,
+                  3.193406798896959
+                ],
+                [
+                  -4.350137710571289,
+                  -4.329593658447266,
+                  -2.382636785507202,
+                  -0.44632938504219055,
+                  -4.356893539428711,
+                  -1.1101527214050293,
+                  9.79686450958252,
+                  9.791133880615234,
+                  6.523254871368408,
+                  3.3443779945373535,
+                  4.856142044067383,
+                  2.5048892498016357,
+                  2.5048892498016357,
+                  0.16203726828098297,
+                  3.1789708137512207,
+                  9.76522445678711,
+                  1.6856372356414795,
+                  0.9989884495735168,
+                  2.3512356281280518,
+                  2.3512356281280518,
+                  -4.387213706970215,
+                  -1.1556823253631592,
+                  -2.068328380584717,
+                  -1.2678858041763306,
+                  -0.6073271632194519,
+                  -0.6073271632194519,
+                  -1.819461464881897,
+                  -0.7499245405197144,
+                  -0.8570488095283508,
+                  -1.0471965074539185,
+                  -2.0420703887939453,
+                  -2.230634927749634,
+                  -0.5352396368980408,
+                  -1.462213397026062,
+                  -0.26969149708747864,
+                  -2.184255599975586,
+                  -2.2460670471191406,
+                  -0.7384259104728699,
+                  -1.3894952535629272,
+                  -1.569459319114685,
+                  -1.402080774307251,
+                  -0.6790482401847839,
+                  -0.34294161200523376,
+                  -2.2367987632751465,
+                  -1.3034839630126953,
+                  -1.1272635459899902,
+                  -0.2344229817390442,
+                  -0.2344229817390442,
+                  -0.1737702190876007,
+                  -1.3788131475448608,
+                  -0.07481568306684494,
+                  -0.12461207062005997,
+                  -0.02517601288855076,
+                  -0.89564448595047,
+                  -1.751697301864624,
+                  -0.035265110433101654,
+                  -0.44177454710006714,
+                  -0.7190030813217163,
+                  -0.2254238873720169,
+                  -0.2254238873720169,
+                  -0.9709740281105042,
+                  -0.04488435015082359,
+                  -1.1355845928192139,
+                  0,
+                  0,
+                  0,
+                  -0.07105129212141037,
+                  -0.07105129212141037,
+                  -0.07105129212141037,
+                  -1.1355845928192139,
+                  -1.1355845928192139,
+                  -1.0268359184265137,
+                  -1.0155681371688843,
+                  4.422946685213578
+                ],
+                [
+                  -1.57597017288208,
+                  -1.5626575946807861,
+                  -1.3347854614257812,
+                  -0.014825130812823772,
+                  -1.5749988555908203,
+                  -0.34974995255470276,
+                  -1.5550462007522583,
+                  -1.5473591089248657,
+                  -0.8030022978782654,
+                  -0.8030022978782654,
+                  -0.8695552349090576,
+                  -0.37277236580848694,
+                  -0.37277236580848694,
+                  -1.9724390506744385,
+                  0,
+                  -1.5353286266326904,
+                  -0.634836733341217,
+                  -0.134891539812088,
+                  -0.4324146807193756,
+                  -0.4324146807193756,
+                  11.97738265991211,
+                  0.8759683966636658,
+                  3.6441922187805176,
+                  -3.51212739944458,
+                  4.017932415008545,
+                  4.017932415008545,
+                  2.5836732387542725,
+                  3.504333019256592,
+                  2.9693026542663574,
+                  -0.33187535405158997,
+                  -0.3251436650753021,
+                  -0.7619025111198425,
+                  -0.10670604556798935,
+                  -0.5277045369148254,
+                  -0.06876049190759659,
+                  -0.8475781083106995,
+                  -0.7886205315589905,
+                  -0.07928836345672607,
+                  -0.8775182366371155,
+                  -0.6198689341545105,
+                  -0.4946502149105072,
+                  -0.2629314959049225,
+                  -0.11006873100996017,
+                  -0.9654050469398499,
+                  -0.8023861646652222,
+                  -1.0461061000823975,
+                  -0.08485236018896103,
+                  -0.08485236018896103,
+                  -0.0456036739051342,
+                  -0.679551362991333,
+                  -0.5400934219360352,
+                  -0.5729872584342957,
+                  -0.016446849331259727,
+                  -0.12176188826560974,
+                  -1.3071458339691162,
+                  -0.1468607783317566,
+                  -0.27699241042137146,
+                  -0.3662587106227875,
+                  -0.05752595141530037,
+                  -0.05752595141530037,
+                  -0.0076783690601587296,
+                  0,
+                  -0.6848971247673035,
+                  0,
+                  0,
+                  0,
+                  -0.6191122531890869,
+                  -0.6191122531890869,
+                  -0.6191122531890869,
+                  -0.6848971247673035,
+                  -0.6848971247673035,
+                  -0.0274844728410244,
+                  -0.9252344369888306,
+                  1.645359518356031
+                ],
+                [
+                  -0.2392289936542511,
+                  -3.1962292194366455,
+                  6.1942138671875,
+                  -3.1853561401367188,
+                  -0.23158866167068481,
+                  -0.04932141304016113,
+                  -0.22986166179180145,
+                  -0.22874625027179718,
+                  -0.11863207817077637,
+                  -0.11863207817077637,
+                  -1.2917231321334839,
+                  -0.01613309234380722,
+                  -0.01613309234380722,
+                  -0.7102309465408325,
+                  0,
+                  -0.22719034552574158,
+                  -1.318381905555725,
+                  -1.2676907777786255,
+                  -1.2676907777786255,
+                  -1.2676907777786255,
+                  -0.22351554036140442,
+                  -0.059227366000413895,
+                  -0.059227366000413895,
+                  -0.061890535056591034,
+                  -0.059227366000413895,
+                  -0.059227366000413895,
+                  -0.005423265974968672,
+                  0,
+                  -0.0254763662815094,
+                  -2.0043301582336426,
+                  7.523204326629639,
+                  2.5686793327331543,
+                  5.250343322753906,
+                  2.5527641773223877,
+                  2.7092349529266357,
+                  -2.075014114379883,
+                  -1.5631144046783447,
+                  -1.5657435655593872,
+                  -4.848362445831299,
+                  -2.8604724407196045,
+                  -2.3341684341430664,
+                  -1.5750062465667725,
+                  -1.854709506034851,
+                  -0.21028202772140503,
+                  -0.28380459547042847,
+                  -2.245972156524658,
+                  -2.111624002456665,
+                  -0.1344369351863861,
+                  -0.026581965386867523,
+                  -0.8292024731636047,
+                  -0.0254763662815094,
+                  -0.13250212371349335,
+                  -0.0879184901714325,
+                  -0.05610745772719383,
+                  -0.07806631922721863,
+                  -0.016352249309420586,
+                  -0.04038550704717636,
+                  -0.061890535056591034,
+                  -0.00948840007185936,
+                  -0.00948840007185936,
+                  -0.5947025418281555,
+                  -0.5753173828125,
+                  -1.9493600130081177,
+                  -1.9283068180084229,
+                  -1.9283068180084229,
+                  -1.9283068180084229,
+                  0,
+                  0,
+                  0,
+                  -0.010526455007493496,
+                  -0.010526455007493496,
+                  -0.010526455007493496,
+                  -0.005423265974968672,
+                  0.24473570334091552
+                ],
+                [
+                  -1.701080322265625,
+                  -1.7058757543563843,
+                  -1.269348382949829,
+                  -0.8259730935096741,
+                  -1.703457236289978,
+                  -0.46808889508247375,
+                  -1.6893333196640015,
+                  -1.683936357498169,
+                  -0.8584807515144348,
+                  -0.8584807515144348,
+                  -0.9469256401062012,
+                  -0.387057900428772,
+                  -0.387057900428772,
+                  -2.4284780025482178,
+                  0,
+                  -1.6759746074676514,
+                  -0.6507912874221802,
+                  -0.5248407125473022,
+                  -0.45470231771469116,
+                  -0.45470231771469116,
+                  -1.6699138879776,
+                  -0.2591892182826996,
+                  -0.9944387078285217,
+                  -0.3219182789325714,
+                  -0.23196469247341156,
+                  -0.23196469247341156,
+                  -0.06610854715108871,
+                  -0.00755374226719141,
+                  -0.1593342274427414,
+                  -1.6145083904266357,
+                  -1.7608592510223389,
+                  -0.5963077545166016,
+                  -1.9263447523117065,
+                  3.564821243286133,
+                  -3.2526042461395264,
+                  6.76332950592041,
+                  6.5758209228515625,
+                  7.31500768661499,
+                  6.573188304901123,
+                  7.781852722167969,
+                  0.7828287482261658,
+                  5.283154487609863,
+                  5.984071731567383,
+                  -0.9494320750236511,
+                  -0.9002217650413513,
+                  -1.3251430988311768,
+                  -0.7646207809448242,
+                  -0.3908259868621826,
+                  -0.15496085584163666,
+                  -1.8004778623580933,
+                  -0.10118699073791504,
+                  -0.2967216968536377,
+                  -0.11964446306228638,
+                  -0.21435075998306274,
+                  -0.37759852409362793,
+                  -0.07368449866771698,
+                  -0.17690902948379517,
+                  -0.2645070254802704,
+                  -0.03598573058843613,
+                  -0.03598573058843613,
+                  -1.1284253597259521,
+                  -1.0434401035308838,
+                  -1.1885517835617065,
+                  -0.2649863660335541,
+                  -0.2649863660335541,
+                  -0.2649863660335541,
+                  -0.6984419226646423,
+                  -0.6984419226646423,
+                  -0.6984419226646423,
+                  -0.823229193687439,
+                  -0.823229193687439,
+                  -0.0851576179265976,
+                  -0.04739302769303322,
+                  1.736280598829441
+                ],
+                [
+                  -0.17493970692157745,
+                  -0.17758390307426453,
+                  -0.5101619958877563,
+                  -0.023599719628691673,
+                  -0.18601009249687195,
+                  -0.06478710472583771,
+                  -0.17248663306236267,
+                  -0.17193783819675446,
+                  -0.09239095449447632,
+                  -0.09239095449447632,
+                  -0.06947727501392365,
+                  -0.06530647724866867,
+                  -0.06530647724866867,
+                  -1.4577339887619019,
+                  0,
+                  -0.17152637243270874,
+                  -0.2682078778743744,
+                  -0.26682916283607483,
+                  -0.0015108294319361448,
+                  -0.0015108294319361448,
+                  -0.17125940322875977,
+                  -0.03564854711294174,
+                  -0.3295128345489502,
+                  -0.8811464309692383,
+                  -0.03564854711294174,
+                  -0.03564854711294174,
+                  -0.2638547122478485,
+                  -0.2638547122478485,
+                  0.4186578392982483,
+                  -1.423527717590332,
+                  -0.34264665842056274,
+                  -0.45288851857185364,
+                  -0.002171299187466502,
+                  0.5045908689498901,
+                  -0.042121440172195435,
+                  -0.09371737390756607,
+                  -0.08385451883077621,
+                  -0.001978341257199645,
+                  -0.013893776573240757,
+                  -0.36096063256263733,
+                  -0.3152768313884735,
+                  0.5989319086074829,
+                  -0.005006991792470217,
+                  2.8747918605804443,
+                  6.9048943519592285,
+                  1.12832772731781,
+                  0.7579477429389954,
+                  1.8580328226089478,
+                  0.9725354909896851,
+                  0.4764067232608795,
+                  0.7128132581710815,
+                  1.5983047485351562,
+                  0.8854984045028687,
+                  4.334035873413086,
+                  -1.7013860940933228,
+                  -0.551393985748291,
+                  -0.7433243989944458,
+                  -0.8811464309692383,
+                  -0.06525900959968567,
+                  -0.06525900959968567,
+                  -2.092808246612549,
+                  -0.2676794230937958,
+                  -0.45858627557754517,
+                  -0.34264665842056274,
+                  -0.34264665842056274,
+                  -0.34264665842056274,
+                  -0.006200416479259729,
+                  -0.006200416479259729,
+                  -0.006200416479259729,
+                  -0.054962556809186935,
+                  -0.054962556809186935,
+                  -0.04411182552576065,
+                  -0.6794841289520264,
+                  0.17167192014513438
+                ],
+                [
+                  -0.013253886252641678,
+                  -0.021098650991916656,
+                  -0.672783374786377,
+                  -0.006636138539761305,
+                  -0.03000921942293644,
+                  -0.011378960683941841,
+                  -0.01095547154545784,
+                  -0.010496260598301888,
+                  -0.13909511268138885,
+                  -0.010056297294795513,
+                  -0.17880845069885254,
+                  -0.009634776040911674,
+                  -0.009634776040911674,
+                  0.011185966432094574,
+                  -0.12149658799171448,
+                  -0.006592938676476479,
+                  1.447468638420105,
+                  -0.7129260301589966,
+                  -0.16074323654174805,
+                  -0.16074323654174805,
+                  -0.5156293511390686,
+                  -0.5072113275527954,
+                  -0.6813589930534363,
+                  2.7732036113739014,
+                  0,
+                  0,
+                  -0.6303049921989441,
+                  0,
+                  -0.29672253131866455,
+                  0.5369303226470947,
+                  -0.3855367600917816,
+                  -0.1800217628479004,
+                  0,
+                  -0.008450171910226345,
+                  0,
+                  -0.0001335782726528123,
+                  -0.0001335782726528123,
+                  0,
+                  -0.08741526305675507,
+                  -0.0001279791904380545,
+                  -0.0001279791904380545,
+                  -0.30135053396224976,
+                  0,
+                  0.34087687730789185,
+                  -0.51108717918396,
+                  2.354724884033203,
+                  -1.2517338991165161,
+                  -0.16791167855262756,
+                  -0.13665761053562164,
+                  -0.9154002666473389,
+                  -0.29672253131866455,
+                  -0.3132389783859253,
+                  -0.00825820304453373,
+                  0,
+                  2.0198333263397217,
+                  1.6512759923934937,
+                  2.203392267227173,
+                  3.303396463394165,
+                  1.0999921560287476,
+                  1.0999921560287476,
+                  -0.3226863443851471,
+                  -0.09411023557186127,
+                  -0.5056656002998352,
+                  -0.29109546542167664,
+                  -0.29109546542167664,
+                  -0.29109546542167664,
+                  -0.08741526305675507,
+                  -0.08741526305675507,
+                  -0.08741526305675507,
+                  -0.1360284984111786,
+                  -0.1360284984111786,
+                  -0.004905610345304012,
+                  -1.2835745811462402,
+                  -0.3622004649249201
+                ],
+                [
+                  -0.06748641282320023,
+                  -0.09702419489622116,
+                  -0.6855460405349731,
+                  -0.030780913308262825,
+                  -0.12095537036657333,
+                  -0.03998176008462906,
+                  -0.05679144337773323,
+                  -0.05452456697821617,
+                  -1.1323379278182983,
+                  -0.034438539296388626,
+                  -0.04935136064887047,
+                  -0.03440350666642189,
+                  -0.03440350666642189,
+                  2.4826653003692627,
+                  -1.0780065059661865,
+                  -0.03608338162302971,
+                  -0.039175279438495636,
+                  -0.02535339444875717,
+                  -0.007642566226422787,
+                  -0.007642566226422787,
+                  -0.03850897029042244,
+                  -0.021815691143274307,
+                  -0.32133448123931885,
+                  -0.03788904473185539,
+                  -0.009641687385737896,
+                  -0.009641687385737896,
+                  -0.7076063752174377,
+                  -0.0015440420247614384,
+                  -0.6005581617355347,
+                  -0.22837086021900177,
+                  -0.15059752762317657,
+                  0.33566415309906006,
+                  -0.16916532814502716,
+                  -0.1407029777765274,
+                  -0.12879592180252075,
+                  -0.273764431476593,
+                  -0.011425567790865898,
+                  0,
+                  -0.3828619420528412,
+                  -0.7664205431938171,
+                  -0.06573917716741562,
+                  -0.15970617532730103,
+                  -0.2553713023662567,
+                  2.082096576690674,
+                  -1.9656423330307007,
+                  -2.053237199783325,
+                  -1.4414596557617188,
+                  -1.3582963943481445,
+                  -1.3501873016357422,
+                  4.012607097625732,
+                  -0.5974699854850769,
+                  -0.6054896116256714,
+                  -0.004009890835732222,
+                  0,
+                  -0.7687735557556152,
+                  0,
+                  -0.020904913544654846,
+                  -0.024845467880368233,
+                  -0.0010398465674370527,
+                  -0.0010398465674370527,
+                  5.978298664093018,
+                  1.9086260795593262,
+                  -0.36012423038482666,
+                  -0.026614688336849213,
+                  -0.026614688336849213,
+                  -0.026614688336849213,
+                  -0.276140958070755,
+                  -0.276140958070755,
+                  -0.276140958070755,
+                  -0.30772656202316284,
+                  -0.30772656202316284,
+                  -0.015116440132260323,
+                  -0.7344070672988892,
+                  -0.27178544925173753
+                ],
+                [
+                  -0.1343037635087967,
+                  -0.2517673671245575,
+                  -0.41816583275794983,
+                  -0.13102136552333832,
+                  -0.20963340997695923,
+                  -0.0800039991736412,
+                  -0.11118675768375397,
+                  -0.10676129907369614,
+                  -0.3115786015987396,
+                  -0.07111746817827225,
+                  -0.15624652802944183,
+                  -0.0685640424489975,
+                  -0.0685640424489975,
+                  -0.34583377838134766,
+                  -0.20114290714263916,
+                  -0.08742671459913254,
+                  -0.3726286292076111,
+                  -0.41075098514556885,
+                  -0.05855032801628113,
+                  -0.05855032801628113,
+                  -0.1975148320198059,
+                  -0.36981502175331116,
+                  0.23290903866291046,
+                  -0.4537063539028168,
+                  -0.2014712542295456,
+                  -0.2014712542295456,
+                  -0.3892386555671692,
+                  -0.1491531878709793,
+                  -0.1491531878709793,
+                  0.7195022702217102,
+                  0.7382560968399048,
+                  -0.9282887578010559,
+                  -0.038820210844278336,
+                  -0.22296373546123505,
+                  -0.020504746586084366,
+                  -0.031800080090761185,
+                  -0.3629439175128937,
+                  -0.24229906499385834,
+                  0.052900299429893494,
+                  -0.11782274395227432,
+                  -0.29026034474372864,
+                  -0.2953259348869324,
+                  -0.0013592023169621825,
+                  -0.5995287895202637,
+                  -0.47979626059532166,
+                  1.1529518365859985,
+                  1.2005999088287354,
+                  -0.47979626059532166,
+                  -0.24779294431209564,
+                  -0.5767378807067871,
+                  0,
+                  -0.18933314085006714,
+                  -0.18933314085006714,
+                  0,
+                  -0.8153489828109741,
+                  0,
+                  -0.1542467176914215,
+                  -0.2809586226940155,
+                  -0.07955623418092728,
+                  -0.07955623418092728,
+                  -0.06330537050962448,
+                  -0.018801381811499596,
+                  5.33546257019043,
+                  1.9590175151824951,
+                  1.9590175151824951,
+                  1.9590175151824951,
+                  0.859118640422821,
+                  0.859118640422821,
+                  0.859118640422821,
+                  3.376441717147827,
+                  3.376441717147827,
+                  2.517324209213257,
+                  -0.4912196695804596,
+                  -0.31995997059192804
+                ],
+                [
+                  -0.15123718976974487,
+                  -0.19803328812122345,
+                  -0.5751533508300781,
+                  -0.05501008778810501,
+                  -0.22480829060077667,
+                  -0.08176138252019882,
+                  -0.1305641382932663,
+                  -0.13339942693710327,
+                  -0.5382749438285828,
+                  -0.07509931176900864,
+                  -0.11296258121728897,
+                  -0.08400831371545792,
+                  -0.08400831371545792,
+                  0.9929147362709045,
+                  -0.43932172656059265,
+                  -0.1133243516087532,
+                  -0.9942997097969055,
+                  -0.6914944648742676,
+                  -0.014808797277510166,
+                  -0.014808797277510166,
+                  -0.12353937327861786,
+                  -0.07427815347909927,
+                  -0.752587616443634,
+                  -1.3942822217941284,
+                  -0.04786185920238495,
+                  -0.04786185920238495,
+                  2.7943155765533447,
+                  -0.6336992979049683,
+                  -0.7012975811958313,
+                  1.1108862161636353,
+                  -0.42760705947875977,
+                  -0.3316032290458679,
+                  -0.00630018999800086,
+                  -0.07892630249261856,
+                  -0.002641885308548808,
+                  -0.07793602347373962,
+                  -0.06281489133834839,
+                  -0.0040570651181042194,
+                  -0.03794108331203461,
+                  -0.060833513736724854,
+                  -0.04135303571820259,
+                  -0.3500156104564667,
+                  -0.013921539299190044,
+                  0.7313922643661499,
+                  -0.7813166379928589,
+                  -2.0001940727233887,
+                  1.9452580213546753,
+                  -0.36493197083473206,
+                  -0.3230816125869751,
+                  -1.1053835153579712,
+                  -0.03379913792014122,
+                  -0.07098113745450974,
+                  -0.020282428711652756,
+                  -0.2959674596786499,
+                  4.573666095733643,
+                  -0.3435865044593811,
+                  -0.910248875617981,
+                  -1.3661047220230103,
+                  -0.4536968767642975,
+                  -0.4536968767642975,
+                  -0.6212710738182068,
+                  0,
+                  -0.1692180633544922,
+                  -0.12082778662443161,
+                  -0.12082778662443161,
+                  -0.12082778662443161,
+                  -0.02287374623119831,
+                  -0.02287374623119831,
+                  -0.02287374623119831,
+                  -0.02287374623119831,
+                  -0.02287374623119831,
+                  0,
+                  5.939772605895996,
+                  -0.015173538576808645
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "es",
+        "oe"
+      ],
+      [
+        "es",
+        "hola que tal"
+      ],
+      [
+        "es",
+        "buenas"
+      ],
+      [
+        "es",
+        "buenos dias"
+      ],
+      [
+        "es",
+        "hola"
+      ],
+      [
+        "es",
+        "Gracias"
+      ],
+      [
+        "es",
+        "Adiós"
+      ],
+      [
+        "es",
+        "hasta luego"
+      ],
+      [
+        "es",
+        "Espero su llamada"
+      ],
+      [
+        "es",
+        "Hasta la próxima"
+      ],
+      [
+        "es",
+        "Chao"
+      ],
+      [
+        "es",
+        "Espero que se comuniquen conmigo pronto"
+      ],
+      [
+        "es",
+        "Asesor"
+      ],
+      [
+        "es",
+        "quiero comunicarme con un asesor"
+      ],
+      [
+        "es",
+        "quiero hablar con alguien"
+      ],
+      [
+        "es",
+        "necesito comunicarme con una persona"
+      ],
+      [
+        "es",
+        "que puede hacer pimex?"
+      ],
+      [
+        "es",
+        "¿Qué es Pimex?"
+      ],
+      [
+        "es",
+        "que hacen?"
+      ],
+      [
+        "es",
+        "¿Para qué sirve Pimex?"
+      ],
+      [
+        "es",
+        "cuánto cuesta?"
+      ],
+      [
+        "es",
+        "que valor tiene?"
+      ],
+      [
+        "es",
+        "¿Qué precio tiene utilizar Pimex?"
+      ],
+      [
+        "es",
+        "Precio de Pimex"
+      ],
+      [
+        "es",
+        "¿Qué costo tiene utilizarlo?"
+      ],
+      [
+        "es",
+        "¿Qué costo tiene?"
+      ],
+      [
+        "es",
+        "¿Cuánto vale Pimex?"
+      ],
+      [
+        "es",
+        "Precio para utilizarlo"
+      ],
+      [
+        "es",
+        "¿Cómo agregar a mi equipo de trabajo a los tableros?"
+      ],
+      [
+        "es",
+        "¿Cómo agrego a más personas al tablero?"
+      ],
+      [
+        "es",
+        "Pasos para agregar a mi equipo al tablero"
+      ],
+      [
+        "es",
+        "¿Cómo agregar usuarios?"
+      ],
+      [
+        "es",
+        "¿Cómo exportar mis leads a un excel?"
+      ],
+      [
+        "es",
+        "Se puede exportar los leads a un excel"
+      ],
+      [
+        "es",
+        "Se puede exportar a los clientes en un excel"
+      ],
+      [
+        "es",
+        "¿Cómo funcionan los tableros?"
+      ],
+      [
+        "es",
+        "Explicación de funcionamiento de los tableros de Pimex"
+      ],
+      [
+        "es",
+        "No puedo acceder a mi cuenta, ¿qué debo hacer?"
+      ],
+      [
+        "es",
+        "tenemos problemas con la aplicación y no deja ingresar"
+      ],
+      [
+        "es",
+        "No me deja ingresar"
+      ],
+      [
+        "es",
+        "Necesito la exportar la factura"
+      ],
+      [
+        "es",
+        "¿Cómo puedo exportar mi factura?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%",
+      "useDuckling": true
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "es": {
+        "welcome.intent": [
+          {
+            "answer": "!Hola, bienvenido a PimexBot! Aqui podrás conocer las principales funcionalidades de pimex y resolver algunas de las dudas que te puedan surgir durante su uso, si en algún momento deseas comunicarte con un asesor escribe la palabra \"Asesor\" y te pediremos algunos datos para que uno de nuestros asesores se comunique contigo lo más rápido posible.\n¿Que deseas hacer?"
+          }
+        ],
+        "bye.intent": [
+          {
+            "answer": "Fue un placer hablar contigo, ¡Adiós!"
+          }
+        ],
+        "asesor.intent": [
+          {
+            "answer": "Te podemos ayudar con eso. Solo necesito un poco de información para empezar, empecemos con tu nombre. ¿Cuál es tu nombre completo? (Digita únicamente tu nombre)"
+          }
+        ],
+        "what.intent": [
+          {
+            "answer": "Pimex es un software que te permite organizar a tus clientes potenciales y reales de manera rápida y sencilla para que puedas monetizar tus esfuerzos marketing y ventas con resultados poderosos. Para conocer más de Pimex mira este video: <a href=\"https://www.youtube.com/watch?v=yOq1CkfXogw\">¿Que es Pimex?</a>"
+          },
+          {
+            "answer": "Pimex es una aplicación web, que te ayuda almacenando y organizando los clientes potenciales obtenidos desde tus campañas de marketing digital.\nPimex es muy fácil de usar, solo tienes que instalarlo en tu sitio web y el hará seguimiento de todos los formularios de contacto de este, para que estés al tanto de tus clientes potenciales. Para conocer más de Pimex mira este video: <a href=\"https://www.youtube.com/watch?v=yOq1CkfXogw\">¿Que es Pimex?</a>"
+          },
+          {
+            "answer": "Pimex es una herramienta para organizar y gestionar los clientes potenciales que puedas generar a través de cualquier formulario de contacto que tengas disponible en la web. Es como centralizar toda la información en un solo lugar con información relevante para tomar decisiones más inteligentes a la hora de invertir tus presupuestos.Para conocer más de Pimex mira este video: <a href=\"https://www.youtube.com/watch?v=yOq1CkfXogw\">¿Que es Pimex?</a>"
+          }
+        ],
+        "fee.intent": [
+          {
+            "answer": "En Pimex te ofrecemos 3 planes, ya escoges cual es el perfecto para tu negocio:\nGratis\nPimex plus, tiene un costo mensual de 35 USD\nPimex enterprise, tiene un costo desde 145 USD mensual\nConoce nuestros planes en: <a href=\"https://es.pimex.co/precio/\">Planes</a>"
+          }
+        ],
+        "add-team.intent": [
+          {
+            "answer": "1. Inicia sesión\n2. Ve a tu tablero\n3. En la columna de la izquierda ve a la opción \"Usuarios\"\n4. Justo debajo de la lista de usuarios vas a ver un campo que dice email. Agrega ahí el email de la persona a la que quieras agregar.\n5. Dale click al botón \"Agregar usuario\".\nListo, ahora un mail de confirmación le llegará a esta persona. Tu invitado solo tiene que registrarse en Pimex y comenzará a ver tu tablero de inmediato.\n"
+          }
+        ],
+        "excel-leads.intent": [
+          {
+            "answer": "En Pimex podrás exportar tus leads o clientes potenciales a tus tableros, en el siguiente video podrás conocer más sobre este tema: <a href=\"https://www.youtube.com/watch?v=-vBv_oovamQ&list=PLlegCSvynNQdG2xUEMIlj5TQR1rU5Va1k&index=2&t=758s\">Exportar a excel</a>"
+          }
+        ],
+        "boards.intent": [
+          {
+            "answer": "Si deseas ver la explicación completa de el funcionamiento de pimex, tesugerimos que ingreses al siguiente video en donde te explicamos cada una de las funcionalidades de éste: <a href=\"https://www.youtube.com/watch?v=-vBv_oovamQ\">¿Cómo funcionan los tableros?</a>"
+          }
+        ],
+        "login-fail.intent": [
+          {
+            "answer": "Bien, para comenzar debes dirigirte a <a href=\"https://app.pimex.co/signin\">Signin</a> y dar clic en la opción “Olvidé mi contraseña”. Después de seguir las instrucciones que se envían a tu correo electrónico podrás intentarlo nuevamente."
+          }
+        ],
+        "billing-export.intent": [
+          {
+            "answer": "Pimex solo generará tu factura una vez hayan pasado los 14 días de prueba que te regalamos para que disfrutes de nuestro servicio. Si no has superado este tiempo, deberás esperar a que el periodo de prueba finalice. Una vez hayan transcurrido estos 14 días podrás acceder a la sección de “Mi suscripción” y allí encontrarás todo lo relacionado a tu plan y facturación."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

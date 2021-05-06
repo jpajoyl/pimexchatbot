@@ -1,15 +1,18 @@
 {
   "settings": {
+    "languages": [
+      "es"
+    ],
+    "forceNER": true,
+    "ner": {
+      "useDuckling": true
+    },
     "tag": "nlp",
     "threshold": 0.5,
     "autoLoad": true,
     "autoSave": true,
     "modelFileName": "model.nlp",
-    "calculateSentiment": true,
-    "languages": [
-      "es"
-    ],
-    "forceNER": true
+    "calculateSentiment": true
   },
   "nluManager": {
     "settings": {
@@ -34,37 +37,156 @@
           "useStemDict": true
         },
         "stemDict": {
-          "com,hab,que": {
-            "intent": "comida",
+          "oe": {
+            "intent": "welcome.intent",
             "domain": "default"
           },
-          "com": {
-            "intent": "comida",
+          "hol,que,tal": {
+            "intent": "welcome.intent",
             "domain": "default"
           },
-          "com,de,list": {
-            "intent": "comida",
+          "buen": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "buen,dia": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "hol": {
+            "intent": "welcome.intent",
+            "domain": "default"
+          },
+          "grac": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "adi": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "hast,lueg": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "esper,llam,su": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "el,hast,proxim": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "cha": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "comunic,conmig,esper,pront,que,se": {
+            "intent": "bye.intent",
+            "domain": "default"
+          },
+          "asesor": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "asesor,comunic,con,quer,un": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "algu,con,habl,quer": {
+            "intent": "asesor.intent",
+            "domain": "default"
+          },
+          "comunic,con,necesit,person,una": {
+            "intent": "asesor.intent",
             "domain": "default"
           }
         },
         "intentDict": {
-          "comida": "default"
+          "welcome.intent": "default",
+          "bye.intent": "default",
+          "asesor.intent": "default"
         },
         "sentences": [
           {
             "domain": "default",
-            "utterance": "¿Que comidas hay?",
-            "intent": "comida"
+            "utterance": "oe",
+            "intent": "welcome.intent"
           },
           {
             "domain": "default",
-            "utterance": "Comidas",
-            "intent": "comida"
+            "utterance": "hola que tal",
+            "intent": "welcome.intent"
           },
           {
             "domain": "default",
-            "utterance": "lista de comidas",
-            "intent": "comida"
+            "utterance": "buenas",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "buenos dias",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "hola",
+            "intent": "welcome.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Gracias",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Adiós",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "hasta luego",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Espero su llamada",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hasta la próxima",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Chao",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Espero que se comuniquen conmigo pronto",
+            "intent": "bye.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "Asesor",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "quiero comunicarme con un asesor",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "quiero hablar con alguien",
+            "intent": "asesor.intent"
+          },
+          {
+            "domain": "default",
+            "utterance": "necesito comunicarme con una persona",
+            "intent": "asesor.intent"
           }
         ],
         "domains": {
@@ -81,44 +203,173 @@
               "log": true
             },
             "features": {
+              "oe": 1,
+              "hol": 1,
               "que": 1,
-              "com": 1,
-              "hab": 1,
-              "list": 1,
-              "de": 1
+              "tal": 1,
+              "buen": 1,
+              "dia": 1,
+              "grac": 1,
+              "adi": 1,
+              "hast": 1,
+              "lueg": 1,
+              "esper": 1,
+              "su": 1,
+              "llam": 1,
+              "el": 1,
+              "proxim": 1,
+              "cha": 1,
+              "se": 1,
+              "comunic": 1,
+              "conmig": 1,
+              "pront": 1,
+              "asesor": 1,
+              "quer": 1,
+              "con": 1,
+              "un": 1,
+              "habl": 1,
+              "algu": 1,
+              "necesit": 1,
+              "una": 1,
+              "person": 1
             },
             "intents": {
-              "comida": 1
+              "welcome.intent": 1,
+              "bye.intent": 1,
+              "asesor.intent": 1
             },
             "intentFeatures": {
-              "comida": {
+              "welcome.intent": {
+                "oe": 1,
+                "hol": 1,
                 "que": 1,
-                "com": 1,
-                "hab": 1,
-                "list": 1,
-                "de": 1
+                "tal": 1,
+                "buen": 1,
+                "dia": 1
+              },
+              "bye.intent": {
+                "grac": 1,
+                "adi": 1,
+                "hast": 1,
+                "lueg": 1,
+                "esper": 1,
+                "su": 1,
+                "llam": 1,
+                "el": 1,
+                "proxim": 1,
+                "cha": 1,
+                "que": 1,
+                "se": 1,
+                "comunic": 1,
+                "conmig": 1,
+                "pront": 1
+              },
+              "asesor.intent": {
+                "asesor": 1,
+                "quer": 1,
+                "comunic": 1,
+                "con": 1,
+                "un": 1,
+                "habl": 1,
+                "algu": 1,
+                "necesit": 1,
+                "una": 1,
+                "person": 1
               }
             },
             "featuresToIntent": {
+              "oe": [
+                "welcome.intent"
+              ],
+              "hol": [
+                "welcome.intent"
+              ],
               "que": [
-                "comida"
+                "welcome.intent",
+                "bye.intent"
               ],
-              "com": [
-                "comida"
+              "tal": [
+                "welcome.intent"
               ],
-              "hab": [
-                "comida"
+              "buen": [
+                "welcome.intent"
               ],
-              "list": [
-                "comida"
+              "dia": [
+                "welcome.intent"
               ],
-              "de": [
-                "comida"
+              "grac": [
+                "bye.intent"
+              ],
+              "adi": [
+                "bye.intent"
+              ],
+              "hast": [
+                "bye.intent"
+              ],
+              "lueg": [
+                "bye.intent"
+              ],
+              "esper": [
+                "bye.intent"
+              ],
+              "su": [
+                "bye.intent"
+              ],
+              "llam": [
+                "bye.intent"
+              ],
+              "el": [
+                "bye.intent"
+              ],
+              "proxim": [
+                "bye.intent"
+              ],
+              "cha": [
+                "bye.intent"
+              ],
+              "se": [
+                "bye.intent"
+              ],
+              "comunic": [
+                "bye.intent",
+                "asesor.intent"
+              ],
+              "conmig": [
+                "bye.intent"
+              ],
+              "pront": [
+                "bye.intent"
+              ],
+              "asesor": [
+                "asesor.intent"
+              ],
+              "quer": [
+                "asesor.intent"
+              ],
+              "con": [
+                "asesor.intent"
+              ],
+              "un": [
+                "asesor.intent"
+              ],
+              "habl": [
+                "asesor.intent"
+              ],
+              "algu": [
+                "asesor.intent"
+              ],
+              "necesit": [
+                "asesor.intent"
+              ],
+              "una": [
+                "asesor.intent"
+              ],
+              "person": [
+                "asesor.intent"
               ]
             },
             "neuralNetwork": {
               "settings": {
-                "log": true,
                 "locale": "es",
                 "tag": "nlu-es",
                 "keepStopwords": true,
@@ -126,26 +377,141 @@
                 "nonedeltaMultiplier": 1.2,
                 "spellCheck": false,
                 "spellCheckDistance": 1,
-                "filterZeros": true
+                "filterZeros": true,
+                "log": true
               },
               "features": [
+                "oe",
+                "hol",
                 "que",
-                "com",
-                "hab",
-                "list",
-                "de"
+                "tal",
+                "buen",
+                "dia",
+                "grac",
+                "adi",
+                "hast",
+                "lueg",
+                "esper",
+                "su",
+                "llam",
+                "el",
+                "proxim",
+                "cha",
+                "se",
+                "comunic",
+                "conmig",
+                "pront",
+                "asesor",
+                "quer",
+                "con",
+                "un",
+                "habl",
+                "algu",
+                "necesit",
+                "una",
+                "person"
               ],
               "intents": [
-                "comida"
+                "welcome.intent",
+                "bye.intent",
+                "asesor.intent"
               ],
               "perceptrons": [
                 [
-                  0.09904304891824722,
-                  9.425287246704102,
-                  0.09904304891824722,
-                  0.09405592083930969,
-                  0.09405592083930969,
-                  4.712988719922839
+                  10.195218086242676,
+                  9.973775863647461,
+                  -0.284483939409256,
+                  0.6095957159996033,
+                  9.829523086547852,
+                  0.5818111896514893,
+                  -4.0585455894470215,
+                  -4.053020000457764,
+                  -2.484398603439331,
+                  -1.5990493297576904,
+                  -1.9585418701171875,
+                  -1.064463496208191,
+                  -1.064463496208191,
+                  -0.8661029934883118,
+                  -0.8661029934883118,
+                  -4.044856071472168,
+                  -0.8230175375938416,
+                  -1.528752088546753,
+                  -0.8230175375938416,
+                  -0.8230175375938416,
+                  -4.039342880249023,
+                  -1.0573995113372803,
+                  -1.432661533355713,
+                  -0.20173805952072144,
+                  -0.7975907921791077,
+                  -0.7975907921791077,
+                  -0.3748643398284912,
+                  -0.3748643398284912,
+                  -0.3748643398284912,
+                  4.088003157456242
+                ],
+                [
+                  -5.56181001663208,
+                  -5.55877161026001,
+                  -0.14689688384532928,
+                  -1.737169861793518,
+                  -5.563728332519531,
+                  -1.450704574584961,
+                  8.677870750427246,
+                  8.67530632019043,
+                  5.219632148742676,
+                  3.4794654846191406,
+                  3.997351884841919,
+                  2.3511908054351807,
+                  2.3511908054351807,
+                  1.7401231527328491,
+                  1.7401231527328491,
+                  8.665531158447266,
+                  1.6461459398269653,
+                  -0.09083101898431778,
+                  1.6461459398269653,
+                  1.6461459398269653,
+                  -5.573540210723877,
+                  -1.5225275754928589,
+                  -2.5378286838531494,
+                  -0.5508694052696228,
+                  -0.7873877882957458,
+                  -0.7873877882957458,
+                  -0.9961115121841431,
+                  -0.9961115121841431,
+                  -0.9961115121841431,
+                  5.586872274680216
+                ],
+                [
+                  -2.0511717796325684,
+                  -2.0446062088012695,
+                  -0.9790306687355042,
+                  -0.2987193763256073,
+                  -2.049410104751587,
+                  -0.4606974720954895,
+                  -2.0386886596679688,
+                  -2.0338807106018066,
+                  -1.242990255355835,
+                  -0.8261315226554871,
+                  -1.1387394666671753,
+                  -0.4666348993778229,
+                  -0.4666348993778229,
+                  -0.4160904586315155,
+                  -0.4160904586315155,
+                  -2.0263638496398926,
+                  -0.6125866770744324,
+                  -0.7973251938819885,
+                  -0.6125866770744324,
+                  -0.6125866770744324,
+                  11.872492790222168,
+                  0.6710989475250244,
+                  3.746169090270996,
+                  -3.192957639694214,
+                  3.869600296020508,
+                  3.869600296020508,
+                  3.0737814903259277,
+                  3.0737814903259277,
+                  3.0737814903259277,
+                  2.0881731161092896
                 ]
               ]
             }
@@ -157,15 +523,67 @@
     "extraSentences": [
       [
         "es",
-        "¿Que comidas hay?"
+        "oe"
       ],
       [
         "es",
-        "Comidas"
+        "hola que tal"
       ],
       [
         "es",
-        "lista de comidas"
+        "buenas"
+      ],
+      [
+        "es",
+        "buenos dias"
+      ],
+      [
+        "es",
+        "hola"
+      ],
+      [
+        "es",
+        "Gracias"
+      ],
+      [
+        "es",
+        "Adiós"
+      ],
+      [
+        "es",
+        "hasta luego"
+      ],
+      [
+        "es",
+        "Espero su llamada"
+      ],
+      [
+        "es",
+        "Hasta la próxima"
+      ],
+      [
+        "es",
+        "Chao"
+      ],
+      [
+        "es",
+        "Espero que se comuniquen conmigo pronto"
+      ],
+      [
+        "es",
+        "Asesor"
+      ],
+      [
+        "es",
+        "quiero comunicarme con un asesor"
+      ],
+      [
+        "es",
+        "quiero hablar con alguien"
+      ],
+      [
+        "es",
+        "necesito comunicarme con una persona"
       ]
     ]
   },
@@ -173,7 +591,8 @@
     "settings": {
       "tag": "ner",
       "entityPreffix": "%",
-      "entitySuffix": "%"
+      "entitySuffix": "%",
+      "useDuckling": true
     },
     "rules": {}
   },
@@ -183,22 +602,19 @@
     },
     "responses": {
       "es": {
-        "Cebolla, carne, manzana.": [
+        "welcome.intent": [
           {
-            "answer": "comida"
+            "answer": "!Hola, bienvenido a vera Longo ! Aqui podrás conocer las principales funcionalidades de pimex y resolver algunas de las dudas que te puedan surgir durante su uso, si en algún momento deseas comunicarte con un asesor escribe la palabra \"Asesor\" y te pediremos algunos datos para que uno de nuestros asesores se comunique contigo lo más rápido posible.\n¿Que deseas hacer?"
           }
         ],
-        "cebo, man y carn": [
+        "bye.intent": [
           {
-            "answer": "comida"
+            "answer": "Fue un placer poder ayudarte, ¡Adiós!"
           }
         ],
-        "comida": [
+        "asesor.intent": [
           {
-            "answer": "Cebolla, carne, manzana."
-          },
-          {
-            "answer": "todas las comidas"
+            "answer": "Te podemos ayudar con eso. Solo necesito un poco de información para empezar, empecemos con tu nombre. ¿Cuál es tu nombre completo? (Digita únicamente tu nombre)"
           }
         ]
       }
